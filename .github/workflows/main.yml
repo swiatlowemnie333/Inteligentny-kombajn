@@ -1,0 +1,24 @@
+            - nazwa: Konfiguracja środowiska Node.js
+  używa: actions/setup-node@v4.3.0
+  z:
+    # Ustaw always-authentication w npmrc.
+    always-auth: # opcjonalnie, domyślnie false
+    # Specyfikacja wersji do użycia. Przykłady: 12.x, 10.15.1, >=10.15.0.
+    node-version: # opcjonalnie
+    # Plik zawierający specyfikację wersji do użycia. Przykłady: package.json, .nvmrc, .node-version, .tool-versions.
+    node-version-file: # opcjonalnie
+    # Docelowa architektura, której Node ma używać. Przykłady: x86, x64. Domyślnie będzie używana architektura systemowa.
+    architektura: # opcjonalnie
+    # Ustaw tę opcję, jeśli chcesz, aby akcja sprawdzała, czy dostępna jest najnowsza wersja spełniająca specyfikację wersji.
+    sprawdź-najnowsze: #opcjonalne
+    # Opcjonalny rejestr do skonfigurowania dla uwierzytelniania. Ustawi rejestr w pliku .npmrc i .yarnrc na poziomie projektu i skonfiguruje uwierzytelnianie do odczytu z env.NODE_AUTH_TOKEN.
+    registry-url: # opcjonalnie
+    # Opcjonalny zakres uwierzytelniania względem rejestrów o określonym zakresie. W przypadku korzystania z rejestru GitHub Packages (https://npm.pkg.github.com/) nastąpi powrót do właściciela repozytorium.
+    zakres: # opcjonalny
+    # Służy do pobierania dystrybucji węzłów z wersji węzłów. Ponieważ istnieje wartość domyślna, użytkownik zazwyczaj jej nie dostarcza. Podczas uruchamiania tej akcji na github.com wartość domyślna jest wystarczająca. Podczas uruchamiania na GHES możesz przekazać osobisty token dostępu dla github.com, jeśli występuje ograniczenie szybkości.
+    token: # opcjonalny, domyślnie ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Służy do określania menedżera pakietów do buforowania w domyślnym katalogu. Obsługiwane wartości: npm, yarn, pnpm.
+    pamięć podręczna: # opcjonalnie
+    # Służy do określania ścieżki do pliku zależności: package-lock.json, yarn.lock itd. Obsługuje symbole wieloznaczne lub listę nazw plików w celu buforowania wielu zależności.
+    ścieżka-zależności-pamięci-podręcznej: # opcjonalnie
+          
